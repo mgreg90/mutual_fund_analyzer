@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Ticker list:</strong>
+  <%= @mutual_fund_list.ticker_list %>
+</p>
+
+<%= link_to 'Edit', edit_mutual_fund_list_path(@mutual_fund_list) %> |
+<%= link_to 'Back', mutual_fund_lists_path %>

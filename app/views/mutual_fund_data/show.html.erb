@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Raw yf date:</strong>
+  <%= @mutual_fund_datum.raw_yf_date %>
+</p>
+
+<p>
+  <strong>Raw mstar data:</strong>
+  <%= @mutual_fund_datum.raw_mstar_data %>
+</p>
+
+<%= link_to 'Edit', edit_mutual_fund_datum_path(@mutual_fund_datum) %> |
+<%= link_to 'Back', mutual_fund_data_path %>

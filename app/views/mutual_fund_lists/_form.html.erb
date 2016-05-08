@@ -1,0 +1,21 @@
+<%= form_for(@mutual_fund_list) do |f| %>
+  <% if @mutual_fund_list.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@mutual_fund_list.errors.count, "error") %> prohibited this mutual_fund_list from being saved:</h2>
+
+      <ul>
+      <% @mutual_fund_list.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :ticker_list %><br>
+    <%= f.text_field :ticker_list %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,25 @@
+<%= form_for(@mutual_fund_datum) do |f| %>
+  <% if @mutual_fund_datum.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@mutual_fund_datum.errors.count, "error") %> prohibited this mutual_fund_datum from being saved:</h2>
+
+      <ul>
+      <% @mutual_fund_datum.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :raw_yf_date %><br>
+    <%= f.text_field :raw_yf_date %>
+  </div>
+  <div class="field">
+    <%= f.label :raw_mstar_data %><br>
+    <%= f.text_field :raw_mstar_data %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
