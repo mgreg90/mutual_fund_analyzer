@@ -24,9 +24,15 @@ ActiveRecord::Schema.define(version: 20160508232716) do
   end
 
   create_table "mutual_fund_lists", force: :cascade do |t|
-    t.string   "raw_ticker_list"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.string   "cat_name"
+    t.float    "one_month_perc"
+    t.float    "year_to_date_perc"
+    t.float    "three_month_perc"
+    t.float    "one_year_perc"
+    t.float    "three_year_perc"
+    t.float    "five_year_perc"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
   end
 
 end
