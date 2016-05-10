@@ -23,6 +23,7 @@ class MutualFundList < ActiveRecord::Base
     temp_arr = push_raw_list_mstar_cats_into_array
     temp_arr = temp_arr.each_slice(7).to_a
     # p temp_arr
+    # Comment for git test
   end
 
 end
